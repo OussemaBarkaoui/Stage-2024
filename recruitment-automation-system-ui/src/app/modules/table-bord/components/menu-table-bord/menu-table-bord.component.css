@@ -1,0 +1,29 @@
+li > a {
+  &:hover {
+    background-color: #d6e5f1;
+    border-radius: 5px;
+    text-decoration: underline;
+  }
+  &.active {
+    color: #24a7e9;
+    border-radius: 5px;
+  }
+}
+.btn-apply {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-apply:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

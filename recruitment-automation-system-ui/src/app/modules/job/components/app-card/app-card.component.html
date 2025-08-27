@@ -1,0 +1,22 @@
+<div class="card" style="width: 20rem;">
+  <div class="card-body overflow-auto">
+    <h5 class="card-title fs-6 text-nowrap fw-bold mb-1">
+      <i class="fas "></i>&nbsp;{{ app.candidateName }}
+    </h5>
+    <h6 class="card-subtitle fs-6 text-secondary mb-1">
+      <i class="fas fa-map-marker-alt"></i>&nbsp;{{ app.candidateEmail }}
+    </h6>
+    <h6 align="center" class="card-subtitle fs-6 text-secondary mt-4">
+      <span class="status-circle" [ngClass]="{
+        'status-preselection': app.status === 'preselection',
+        'status-accepted': app.status === 'accepted'
+      }"></span>
+      {{ app.status }}
+    </h6>
+    <hr>
+    <p class="card-text fs-6 text-secondary">
+      <i class="fas fa-calendar-alt"></i>&nbsp;Posted: {{ app.applicationDate | date:'mediumDate' }}
+    </p>
+  </div>
+  <button (click)="onApply()">Apply</button>
+</div>

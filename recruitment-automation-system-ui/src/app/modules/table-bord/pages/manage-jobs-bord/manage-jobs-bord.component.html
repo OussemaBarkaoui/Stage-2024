@@ -1,0 +1,49 @@
+<div class="job-listing-header text-center mb-4">
+  <h1 class="display-4">Design Your Job</h1>
+  <button class="btn btn-primary" [routerLink]="['/jobsBord']">Go back</button>
+</div>
+
+<form (ngSubmit)="savejobs()" class="job-listing-form mx-auto my-4 p-4 border rounded shadow-lg">
+  <div class="alert alert-danger" role="alert" *ngIf="errorMsg.length">
+    <p *ngFor="let msg of errorMsg">{{msg}}</p>
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Job Title</label>
+    <input [(ngModel)]="savejobRequest.title"  [value]="" type="text" id="title" class="form-control" name="title" required>
+
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Job Description</label>
+    <textarea [(ngModel)]="savejobRequest.description" id="description" class="form-control" name="description" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="location" class="form-label">Location</label>
+    <input [(ngModel)]="savejobRequest.location" type="text" id="location" class="form-control" name="location" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="department" class="form-label">Department</label>
+    <input [(ngModel)]="savejobRequest.department" type="text" id="department" class="form-control" name="department" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="requirements" class="form-label">Requirements</label>
+    <textarea [(ngModel)]="savejobRequest.requirements" id="requirements" class="form-control" name="requirements" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="postedDate" class="form-label">Posted Date</label>
+    <input [(ngModel)]="savejobRequest.postedDate" type="date" id="postedDate" class="form-control" name="postedDate" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="closingDate" class="form-label">Closing Date</label>
+    <input [(ngModel)]="savejobRequest.closingDate" type="date" id="closingDate" class="form-control" name="closingDate" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+

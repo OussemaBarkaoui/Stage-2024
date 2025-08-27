@@ -1,0 +1,31 @@
+<div
+  class="card"
+  style="width: 20rem;"
+
+>
+  <div class="card-body overflow-auto"> <!-- Changed from overflow-scroll to overflow-auto -->
+    <h5 class="card-title fs-6 text-nowrap fw-bold mb-1">
+      <i class="fas fa-briefcase"></i>&nbsp;{{ job.title }}
+    </h5>
+    <h6 class="card-subtitle fs-6 text-secondary mb-1">
+      <i class="fas fa-map-marker-alt"></i>&nbsp;{{ job.location }}
+    </h6>
+    <h6 class="card-subtitle fs-6 text-secondary mb-1">
+      <i class="fas fa-building"></i>&nbsp;{{ job.department }}
+    </h6>
+    <p class="card-text">{{ job.description }}</p>
+    <p class="card-text"><strong>Requirements:</strong> {{ job.requirements }}</p>
+    <hr>
+    <p class="card-text fs-6 text-secondary">
+      <i class="fas fa-calendar-alt"></i>&nbsp;Posted: {{ job.postedDate | date:'mediumDate' }}
+    </p>
+    <p class="card-text fs-6 text-secondary">
+      <i class="fas fa-calendar-times"></i>&nbsp;Closing: {{ job.closingDate | date:'mediumDate' }}
+    </p>
+  </div>
+  <div class="card-footer d-flex gap-2 justify-content-between align-items-center">
+
+    <button (click)="applyForJob()" class="btn btn-apply">Apply</button>
+
+  </div>
+</div>

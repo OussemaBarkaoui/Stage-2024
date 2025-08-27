@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            padding-bottom: 20px;
+            border-bottom: 2px solid #007BFF;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin: 0;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .content p {
+            margin: 0;
+            padding: 10px 0;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .date {
+            font-style: italic;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Notification</h1>
+    </div>
+    <div class="content">
+        <p th:text="${message}">[Message]</p>
+        <p class="date" th:text="'Date: ' + ${date}">[Date]</p>
+    </div>
+    <div class="footer">
+        <p>Thank you for using our service!</p>
+    </div>
+</div>
+</body>
+</html>

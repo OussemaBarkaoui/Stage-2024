@@ -1,0 +1,114 @@
+/* Styling for the header of the form */
+.job-listing-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.job-listing-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.job-listing-header button {
+  margin-top: 1rem;
+}
+
+/* Styling for the form itself */
+.job-listing-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for form labels */
+.job-listing-form .form-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Styling for form controls */
+.job-listing-form .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* Styling for alert messages */
+.alert-danger {
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-success {
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Styling for buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+
+/* Styling for the Cancel button */
+.btn-cancel {
+  background-color: #dc3545; /* Red color */
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Styling for button spacing */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-actions .btn {
+  margin-right: 1rem; /* Space between buttons */
+}
+
+.form-actions .btn:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+}

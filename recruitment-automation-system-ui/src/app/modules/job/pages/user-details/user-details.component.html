@@ -1,0 +1,73 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="w-75 p-4 border rounded shadow-sm bg-light">
+    <h2 class="text-center mb-4">User Details</h2>
+
+    <div *ngIf="userDetailResponse.email && userDetailResponse.username" class="mb-3">
+      <p><strong>Email:</strong> {{ userDetailResponse.email }}</p>
+      <p><strong>Username:</strong> {{ userDetailResponse.username }}</p>
+      <p><strong>First Name:</strong> {{ userDetailResponse.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ userDetailResponse.lastName }}</p>
+      <p><strong>Phone Number:</strong> {{ userDetailResponse.phoneNumber }}</p>
+      <p><strong>Address:</strong> {{ userDetailResponse.address }}</p>
+<!--      <button (click)="updateUserDetail()" class="btn btn-warning w-100 mb-2">Update</button>-->
+<!--      <button (click)="deleteUserDetail()" class="btn btn-danger w-100">Delete</button>-->
+    </div>
+
+    <form *ngIf="!userDetailResponse.email || !userDetailResponse.username"
+          (ngSubmit)="saveUserDetail()"
+          #userDetailForm="ngForm"
+          class="border p-4 bg-light rounded">
+      <h2 class="text-center mb-4">Complete Your Details</h2>
+
+      <div class="form-group mb-3">
+        <label for="firstName" class="form-label">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          [(ngModel)]="userDetail.firstName"
+          name="firstName"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="lastName" class="form-label">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          [(ngModel)]="userDetail.lastName"
+          name="lastName"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="phoneNumber" class="form-label">Phone Number:</label>
+        <input
+          type="text"
+          id="phoneNumber"
+          [(ngModel)]="userDetail.phoneNumber"
+          name="phoneNumber"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="address" class="form-label">Address:</label>
+        <input
+          type="text"
+          id="address"
+          [(ngModel)]="userDetail.address"
+          name="address"
+          required
+          class="form-control"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Save</button>
+    </form>
+  </div>
+</div>

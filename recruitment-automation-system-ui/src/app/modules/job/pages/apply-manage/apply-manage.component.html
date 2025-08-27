@@ -1,0 +1,63 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <form (ngSubmit)="submitApplication()" #applicationForm="ngForm" class="w-75 p-4 border rounded shadow-sm bg-light">
+    <h2 class="text-center mb-4">Apply for Job</h2>
+
+    <!-- Job ID (hidden field) -->
+    <input type="hidden" [(ngModel)]="jobId" name="jobId" />
+
+
+    <div class="form-group mb-3">
+      <label for="candidateName" class="form-label">Candidate Name:</label>
+      <input
+        type="text"
+        id="candidateName"
+        [(ngModel)]="candidateName"
+      name="candidateName"
+      required
+      class="form-control"
+      />
+    </div>
+
+    <!-- Candidate Email -->
+    <div class="form-group mb-3">
+      <label for="candidateEmail" class="form-label">Candidate Email:</label>
+      <input
+        type="email"
+        id="candidateEmail"
+        [(ngModel)]="candidateEmail"
+      name="candidateEmail"
+      required
+      class="form-control"
+      />
+    </div>
+
+    <!-- Resume URL -->
+    <div class="form-group mb-3">
+      <label for="resumeUrl" class="form-label">Resume URL:</label>
+      <input
+        type="url"
+        id="resumeUrl"
+        [(ngModel)]="resumeUrl"
+      name="resumeUrl"
+      required
+      class="form-control"
+      />
+    </div>
+
+    <!-- Cover Letter -->
+    <div class="form-group mb-3">
+      <label for="coverLetter" class="form-label">Cover Letter:</label>
+      <textarea
+        id="coverLetter"
+        [(ngModel)]="coverLetter"
+      name="coverLetter"
+      rows="4"
+      class="form-control"
+      ></textarea>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+  </form>
+</div>
